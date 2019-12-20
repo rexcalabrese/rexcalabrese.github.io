@@ -10500,6 +10500,7 @@ div.cell.selected.jupyter-soft-selected:before {
   user-select: none;
   /* Use default cursor */
   cursor: default;
+  display:none !important;
 }
 @media (max-width: 540px) {
   .prompt {
