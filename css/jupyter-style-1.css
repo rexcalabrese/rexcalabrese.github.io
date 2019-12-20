@@ -1593,7 +1593,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 940px;
   }
 }
 .container-fluid {
@@ -10532,10 +10532,18 @@ div.inner_cell {
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
   border: 1px solid #cfcfcf;
+    
   border-radius: 2px;
   background: #f7f7f7;
   line-height: 1.21429em;
+  height: 4em;
+  overflow-x:hidden;
+  overflow-y: auto;
+  resize: vertical;
+  scrollbar-width: thin;
 }
+
+
 /* This is needed so that empty prompt areas can collapse to zero height when there
    is no content in the output_subarea and the prompt. The main purpose of this is
    to make sure that empty JavaScript output_subareas have no height. */

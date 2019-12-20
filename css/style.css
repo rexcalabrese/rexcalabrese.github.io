@@ -181,7 +181,7 @@ pre {
   color: #3f3b36;
   border: 1px solid #ebebeb !important;
   font: lighter 1.2rem/2rem Monaco,'MonacoRegular',monospace;
-  background: url(../images/pre.png) repeat 0 -0.9rem;
+  /*background: url(../images/pre.png) repeat 0 -0.9rem; */
   background-size: 1px 4rem;
 }
 
