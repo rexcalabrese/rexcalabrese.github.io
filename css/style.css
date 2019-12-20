@@ -184,15 +184,19 @@ pre {
   /*background: url(../images/pre.png) repeat 0 -0.9rem; */
   background-size: 1px 4rem;
 }
-
 #fh5co-header {
-    top:0;
+
+    top: 0;
     margin-top: 0;
     margin-bottom: 0;
     position: fixed;
     z-index: 999;
-    background:white;
-    opacity: 0.9;
+    background: 
+
+    white;
+    opacity: 0.7;
+    width: 100%;
+
 }
 
 @media screen and (max-width: 768px) {
