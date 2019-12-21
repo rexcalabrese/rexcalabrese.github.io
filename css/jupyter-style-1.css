@@ -10537,11 +10537,13 @@ div.input_area {
   border-radius: 2px;
   background: #f7f7f7;
   line-height: 1.21429em;
+/*
   height: 4em;
   overflow-x:hidden;
   overflow-y: hidden;
   resize: vertical;
   scrollbar-width: thin;
+*/
 }
 
 
@@ -11428,6 +11430,8 @@ div#notebook {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   min-height: 100%;
+    
+  margin-top: 51px !important;
 }
 @media not print {
   #notebook-container {
