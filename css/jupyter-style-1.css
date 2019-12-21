@@ -10539,7 +10539,7 @@ div.input_area {
   line-height: 1.21429em;
   height: 4em;
   overflow-x:hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   resize: vertical;
   scrollbar-width: thin;
 }
