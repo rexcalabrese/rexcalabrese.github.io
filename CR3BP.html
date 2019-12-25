@@ -184,6 +184,42 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration -->
     </head>
+
+
+
+
+<!-- CODEHIDER SCRIPT -->
+    <script>
+function hidecode() {
+    x=document.getElementsByClassName("input");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display="none";
+    }
+    x=document.getElementsByClassName("output_stderr");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display="none";
+    }
+}
+function showcode() {
+    x=document.getElementsByClassName("input");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display="";
+    }
+    x=document.getElementsByClassName("output_stderr");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display="";
+    }
+}
+</script>
+<!-- END CODEHIDER SCRIPT -->   
+<script>
+    $( document ).ready(function() {
+    hidecode();
+});
+</script>
+
+
+
 <body>
     <header id="fh5co-header" role="banner">
 			<div class="container">
@@ -206,6 +242,19 @@ div#notebook {
 							<li>
 								<a href="index.html">Home</a>
 							</li>
+                                                        
+                            
+                            <!-- HIDE CODE BUTTONS -->
+                            <li>
+                            <input class="box"  type="button" onclick="hidecode()" value="Hide code"/>
+                            </li>
+                            
+                            <li>
+                            <input class="box"  type="button" onclick="showcode()" value="Show code"/>    
+                            </li>
+                            <!-- END: HIDE CODE BUTTONS -->
+                            
+                            
 
 						</ul>
 						<a href="#" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Get Started</a>

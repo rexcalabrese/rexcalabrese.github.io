@@ -112,7 +112,8 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration -->
     
-    
+ 
+<!-- CODEHIDER SCRIPT -->
     <script>
 function hidecode() {
     x=document.getElementsByClassName("input");
@@ -135,6 +136,14 @@ function showcode() {
     }
 }
 </script>
+<!-- END CODEHIDER SCRIPT -->   
+    
+<script>
+    $( document ).ready(function() {
+    hidecode();
+});
+</script>
+    
     
     </head>
 <body>
@@ -162,6 +171,7 @@ function showcode() {
 								<a href="index.html">Home</a>
 							</li>
                             
+                            <!-- HIDE CODE BUTTONS -->
                             <li>
                             <input class="box"  type="button" onclick="hidecode()" value="Hide code"/>
                             </li>
@@ -169,7 +179,8 @@ function showcode() {
                             <li>
                             <input class="box"  type="button" onclick="showcode()" value="Show code"/>    
                             </li>
-
+                            <!-- END: HIDE CODE BUTTONS -->
+                            
 						</ul>
 						<a href="#" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Get Started</a>
 					</nav>
