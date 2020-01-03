@@ -195,13 +195,40 @@ div#notebook {
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
     
+<!----------------------------------------------------------------------->
+<!-- CODEHIDER SCRIPT -->
     <script>
-    $(document).ready(function() {
-    $("#resizable").resizable();
-    });
-    </script>
-    <!-- END Resize cell heights -->
-
+function hidecode() {
+    x=document.getElementsByClassName("input");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display="none";
+    }
+    x=document.getElementsByClassName("output_stderr");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display="none";
+    }
+}
+function showcode() {
+    x=document.getElementsByClassName("input");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display="";
+    }
+    x=document.getElementsByClassName("output_stderr");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display="";
+    }
+}
+</script>
+  
+    
+<script>
+    $( document ).ready(function() {
+    hidecode();
+});
+</script>
+    
+<!-- END CODEHIDER SCRIPT -->   
+<!----------------------------------------------------------------------->  
 
 </head>
     
@@ -225,10 +252,18 @@ div#notebook {
 				<div id="fh5co-main-nav">
 					<nav id="fh5co-nav" role="navigation">
 						<ul>
-							<li class="fh5co-active">
+							<li>
 								<a href="index.html">Home</a>
 							</li>
-
+                            <!-- HIDE CODE BUTTONS -->
+                            <li>
+                            <input class="box"  type="button" onclick="hidecode()" value="Hide code"/>
+                            </li>
+                            
+                            <li>
+                            <input class="box"  type="button" onclick="showcode()" value="Show code"/>    
+                            </li>
+                            <!-- END: HIDE CODE BUTTONS -->
 						</ul>
 						<a href="#" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">Get Started</a>
 					</nav>
