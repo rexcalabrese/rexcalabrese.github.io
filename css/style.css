@@ -227,6 +227,7 @@ pre {
   #fh5co-main-nav {
     text-align: left;
     margin-top: 40px;
+	display:none;
   }
 }
 #fh5co-main-nav ul {
