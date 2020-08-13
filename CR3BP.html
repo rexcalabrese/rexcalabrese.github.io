@@ -32,7 +32,7 @@
 	<!-- Theme Style -->
 	<link rel="stylesheet" href="css/style.css">
 
-	
+
 	<!-- FOR IE9 below -->
 	<!--[if lte IE 9]>
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -48,8 +48,8 @@
 
 
 <link rel="stylesheet" href="css/jupyter-style-1.css">
-    
- 
+
+
 <style type="text/css">
     .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
@@ -137,14 +137,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -202,7 +202,7 @@ function showcode() {
     }
 }
 </script>
-<!-- END CODEHIDER SCRIPT -->   
+<!-- END CODEHIDER SCRIPT -->
 
 
 
@@ -226,10 +226,10 @@ function showcode() {
 
 				</div>
 				<!-- Logo -->
-				
+
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-				
+
 				<!-- Main Nav -->
 				<div id="fh5co-main-nav">
 					<nav id="fh5co-nav" role="navigation">
@@ -237,19 +237,17 @@ function showcode() {
 							<li>
 								<a href="index.html">Home</a>
 							</li>
-                                                        
-                            
+
+
                             <!-- HIDE CODE BUTTONS -->
                             <li>
                             <input class="box"  type="button" onclick="hidecode()" value="Hide code"/>
                             </li>
-                            
+
                             <li>
-                            <input class="box"  type="button" onclick="showcode()" value="Show code"/>    
+                            <input class="box"  type="button" onclick="showcode()" value="Show code"/>
                             </li>
                             <!-- END: HIDE CODE BUTTONS -->
-                            
-                            
 
 						</ul>
 						<a href="Resume-Rex-Calabrese.pdf" target="_blank" class="fh5co-nav-call-to-action js-fh5co-nav-call-to-action">resume.</a>
@@ -258,11 +256,11 @@ function showcode() {
 				<!-- Main Nav -->
 			</div>
 		</header>
-    
+
     <!-- NOTEBOOK STARTS HERE-->
     <!-- NEEDS TO END </HTML> -->
     <!-- COPY EVERYTHING AFTER <BODY> -->
-    
+
    <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -377,32 +375,32 @@ function showcode() {
 <span class="c1"># equations, thus 2x3 = 6 components. </span>
 <span class="k">def</span> <span class="nf">deriv</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="n">mu</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">1.5</span>
-    
+
     <span class="c1"># </span>
     <span class="n">r_mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
     <span class="c1">#j2 Perturbation</span>
     <span class="n">C1</span> <span class="o">=</span> <span class="p">((</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">J2</span> <span class="o">*</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">re</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="n">r_mag</span><span class="o">**</span><span class="mi">5</span>
     <span class="n">a_j2_x</span> <span class="o">=</span><span class="n">C1</span> <span class="o">*</span> <span class="p">((</span><span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">r_mag</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">a_j2_y</span> <span class="o">=</span><span class="n">C1</span> <span class="o">*</span> <span class="p">((</span><span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">r_mag</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
-    <span class="n">a_j2_z</span> <span class="o">=</span><span class="n">C1</span> <span class="o">*</span> <span class="p">((</span><span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">r_mag</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  
-    
-    
+    <span class="n">a_j2_y</span> <span class="o">=</span><span class="n">C1</span> <span class="o">*</span> <span class="p">((</span><span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">r_mag</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">a_j2_z</span> <span class="o">=</span><span class="n">C1</span> <span class="o">*</span> <span class="p">((</span><span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">r_mag</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+
     <span class="c1">#j3 Perturbation</span>
     <span class="n">C2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">J3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">mu</span> <span class="o">/</span> <span class="n">r_mag</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">re</span> <span class="o">/</span> <span class="n">r_mag</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
     <span class="n">zr</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">r_mag</span>
-    
+
     <span class="k">if</span> <span class="n">calculate_j3</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
         <span class="n">a_j3_x</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">a_j3_y</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">a_j3_z</span> <span class="o">=</span> <span class="mi">0</span>  
-        
+        <span class="n">a_j3_z</span> <span class="o">=</span> <span class="mi">0</span>
+
     <span class="k">if</span> <span class="n">calculate_j3</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">a_j3_x</span> <span class="o">=</span> <span class="n">C2</span><span class="o">*</span> <span class="p">(</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">7</span> <span class="o">*</span> <span class="n">zr</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">zr</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">r_mag</span><span class="p">))</span>
         <span class="n">a_j3_y</span> <span class="o">=</span> <span class="n">C2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">7</span> <span class="o">*</span> <span class="n">zr</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">zr</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">r_mag</span><span class="p">))</span>
         <span class="n">a_j3_z</span> <span class="o">=</span> <span class="n">C2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span>   <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">zr</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="mi">35</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">zr</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>  <span class="p">))</span>
 
-     
+
     <span class="c1"># Ratio, j2 to j3</span>
     <span class="c1">#print((a_j3_x/a_j2_x)*100)</span>
     <span class="c1">#print((a_j3_y/a_j2_y)*100)</span>
@@ -432,7 +430,7 @@ function showcode() {
     <span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">ElapsedTime</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># define time vector</span>
     <span class="c1">#u = odeint(deriv, u0, dt)  # integrate the equations of motion</span>
     <span class="n">u</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">deriv</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1.0E-20</span><span class="p">)</span>  <span class="c1"># integrate the equations of motion</span>
-    
+
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">z2</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">T</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">u</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">u</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
@@ -517,16 +515,16 @@ function showcode() {
         <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">h</span><span class="p">)</span>
         <span class="n">eccvec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="o">/</span><span class="n">mu</span> <span class="o">-</span> <span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="n">eccmag</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">eccvec</span><span class="p">)</span>
-        
+
         <span class="n">energy</span><span class="o">=</span><span class="n">v_mag</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">mu</span><span class="o">/</span><span class="n">r_mag</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="n">mu</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">energy</span><span class="p">)</span>
         <span class="n">p</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">eccmag</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
         <span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
-        
+
         <span class="n">lon_asc_node</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">N</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
-        
+
         <span class="n">argp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">eccvec</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">eccvec</span><span class="p">)))</span>
-        
+
         <span class="n">I2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">I</span>
         <span class="n">LASCN</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lon_asc_node</span>
         <span class="n">ARGP</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">argp</span>
@@ -1390,7 +1388,7 @@ function showcode() {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
 
     </div>
@@ -1402,7 +1400,7 @@ function showcode() {
   </div>
 </body>
 
- 
+
 
 
 </html>
