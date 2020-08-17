@@ -1509,8 +1509,3 @@ a > img.fh5co-align-center {
 .negative-top-margin {
     margin-top: -8em;
 }
-
-.rfc-fixed-element {
-    left: 20%;
-    position: fixed;
-}
