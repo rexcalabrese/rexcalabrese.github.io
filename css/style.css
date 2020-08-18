@@ -1507,6 +1507,7 @@ a > img.fh5co-align-center {
 }
 
 .negative-top-margin {
+    min-height: 800px;
     margin-top: -8em;
 }
 
