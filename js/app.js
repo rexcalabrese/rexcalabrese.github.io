@@ -7,32 +7,33 @@
 particlesJS.load('particles-js', 'particles.json', function() {
   console.log('particles.js loaded - callback');
 });
-*/
+ */
 
 /* Otherwise just put the config content (json): */
+
 
 particlesJS('particles-js',
   
   {
     "particles": {
       "number": {
-        "value": 80,
+        "value": 18,
         "density": {
           "enable": true,
           "value_area": 800
         }
       },
       "color": {
-        "value": "#d7d7d7"
+        "value": "#000000"
       },
       "shape": {
-        "type": "circle",
+        "type": "polygon",
         "stroke": {
-          "width": 0,
-          "color": "#d7d7d7"
+          "width": 10,
+          "color": "#ffffff"
         },
         "polygon": {
-          "nb_sides": 5
+          "nb_sides": 3
         },
         "image": {
           "src": "img/github.svg",
@@ -41,36 +42,36 @@ particlesJS('particles-js',
         }
       },
       "opacity": {
-        "value": 0.5,
+        "value": 0.01,
         "random": false,
         "anim": {
-          "enable": false,
-          "speed": 1,
+          "enable": true,
+          "speed": 0.5,
           "opacity_min": 0.1,
           "sync": false
         }
       },
       "size": {
-        "value": 5,
+        "value": 11,
         "random": true,
         "anim": {
-          "enable": false,
-          "speed": 40,
+          "enable": true,
+          "speed":2,
           "size_min": 0.1,
           "sync": false
         }
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
-        "color": "#d7d7d7",
-        "opacity": 0.4,
-        "width": 1
+        "distance": 1111,
+        "color": "#c2c2c2",
+        "opacity": 0.3,
+        "width": 100
       },
       "move": {
         "enable": true,
-        "speed": 6,
-        "direction": "none",
+        "speed": 0.1,
+        "direction": "false",
         "random": false,
         "straight": false,
         "out_mode": "out",
@@ -109,7 +110,7 @@ particlesJS('particles-js',
           "speed": 3
         },
         "repulse": {
-          "distance": 200
+          "distance": 100
         },
         "push": {
           "particles_nb": 4
@@ -131,3 +132,4 @@ particlesJS('particles-js',
   }
 
 );
+
