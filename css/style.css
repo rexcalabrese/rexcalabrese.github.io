@@ -443,6 +443,14 @@ pre {
     z-index: 2;
 }
 
+#fh5co-work .fh5co-work-wrap:hover {
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 2;
+-webkit-box-shadow: 1px 0px 50px 5px rgba(0,0,0,0.025); 
+box-shadow: 1px 0px 50px 5px rgba(0,0,0,0.025);
+}
+
 #fh5co-work .fh5co-work-item {
     position: relative;
     display: block;
@@ -463,7 +471,8 @@ pre {
 #fh5co-work .fh5co-work-item:focus,
 
 #fh5co-work .fh5co-work-item:active {
-    border-bottom: none !important;
+
+   
 }
 
 #fh5co-work .fh5co-work-item .fh5co-overlay-text,

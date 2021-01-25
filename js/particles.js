@@ -91,11 +91,11 @@ var pJS = function(tag_id, params){
       detect_on: 'canvas',
       events: {
         onhover: {
-          enable: true,
+          enable: false,
           mode: 'grab'
         },
         onclick: {
-          enable: true,
+          enable: false,
           mode: 'push'
         },
         resize: true
@@ -113,14 +113,14 @@ var pJS = function(tag_id, params){
           duration: 0.4
         },
         repulse:{
-          distance: 200,
+          distance: 150,
           duration: 0.4
         },
         push:{
           particles_nb: 4
         },
         remove:{
-          particles_nb: 2
+          particles_nb: 0
         }
       },
       mouse:{}
