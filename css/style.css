@@ -1769,4 +1769,20 @@ td {
 
 
 
-
+@media screen and (max-width: 768px) {
+    .fh5co-spacer-xlg {
+        height: 80px;
+    }
+    model-viewer{
+        max-height:400px;
+    }
+    .negative-top-margin {
+    min-height: 100px;
+        
+    margin-top: 0em;
+}
+    h1{
+        font-size:2em;
+        line-height: 1.2em;
+    }
+}
