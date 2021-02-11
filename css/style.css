@@ -308,13 +308,20 @@ pre {
     width: 100%;
 }
 
+
+
+
+
 @media screen and (max-width: 768px) {
     #fh5co-main-nav {
         text-align: left;
         margin-top: 40px;
-        display: none;
+
     }
 }
+
+
+
 
 #fh5co-main-nav ul {
     padding: 0;
@@ -338,7 +345,9 @@ pre {
 
 @media screen and (max-width: 768px) {
     #fh5co-main-nav ul {
-        text-align: right;
+        font-size: 2em;
+        line-height: 1em;
+        text-align: center;
         margin-left: inherit;
         margin-right: inherit;
     }
@@ -395,14 +404,11 @@ pre {
     text-align: right;
 }
 
-@media screen and (max-width: 768px) {
-    #fh5co-main-nav .fh5co-nav-call-to-action {
-        position: relative;
-        top: 0px;
-        text-align: right;
-        display: inline-block;
-        float: right;
-    }
+@media screen and (max-width: 768px)
+#fh5co-main-nav .fh5co-nav-call-to-action {
+    margin: 38%;
+    position: relative;
+    float: left;
 }
 
 #fh5co-intro {
@@ -426,6 +432,17 @@ pre {
         font-size: 40px;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+#fh5co-main-nav .fh5co-nav-call-to-action {
+    position: relative;
+    right: 0;
+    top: 0;
+    text-align: left;
+}
+}
+
 
 #fh5co-intro .fh5co-intro-sub {
     margin: 2em 0;
