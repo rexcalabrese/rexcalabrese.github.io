@@ -186,6 +186,14 @@ h5,
     font-size: 45px;
     line-height: 55px;
 }
+@media screen and (max-width: 768px) {
+    h5,
+
+    .h5 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
 
 h6,
 
@@ -1699,7 +1707,11 @@ td:hover {
 td {
     font-size: 0.7em;
 }
-
+@media screen and (max-width: 768px) {
+    td {
+        font-size: 0.55em;
+    }
+}
 
 .hotspot {
     position:  absolute;

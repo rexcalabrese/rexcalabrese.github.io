@@ -46,16 +46,16 @@ https://modelviewer.dev/editor/ helps with 3d model orientation
     <link rel="stylesheet" href="css/easy-responsive-tabs.css">
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+    <!--    <script src="js/model-viewer.min.js"></script>-->
     <!-- FOR IE9 below -->
     <!--[if lte IE 9]>
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-    <!-- Import the component -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-    <!-- Use it like any other HTML element -->
-    <!--    <script src="js/model-viewer.min.js"></script>-->
+
 </head>
 
 <body>
@@ -74,8 +74,7 @@ https://modelviewer.dev/editor/ helps with 3d model orientation
                 <nav id="fh5co-nav" role="navigation">
                     <ul>
                         <li class="fh5co">
-                            <a href="index.html">Home</a>
-                        
+                            <a href="index.html">Home</a> 
                     </ul>
                     <ul>
                     <li class="fh5co">
@@ -92,7 +91,7 @@ https://modelviewer.dev/editor/ helps with 3d model orientation
             <div class="negative-top-margin row">
                 <div class="col-12 ">
 
-                    <model-viewer src="models/Testbed-3d.glb" style="width: 100%; height: 800px;" disable-zoom="" camera-orbit="-346.8deg 66.78deg 0.5m" field-of-view="40deg" auto-rotate min-field-of-view="auto" max-field-of-view="auto" camera-controls="" interaction-prompt="none">
+                    <model-viewer src="models/Testbed-3d.glb" style="width: 100%; height: 800px;" disable-zoom="" camera-orbit="-346.8deg 66.78deg 0.5m" field-of-view="40deg" auto-rotate min-field-of-view="auto" max-field-of-view="auto" camera-controls="" interaction-prompt="none" poster="models/poster.png">
                 </div>
             </div>
             <div class="row">
@@ -136,10 +135,6 @@ https://modelviewer.dev/editor/ helps with 3d model orientation
             </div>
 
 
-
-
-
-
             <div class="row top5em">
                 <h5><span class="highlight-text-invert">Mass Balence Prototypes</span></h5>
                 <video src="images/sat-testbed-project/stability_test2.mp4" type="video/mp4" width="100%" autoplay loop muted playsinline/>
@@ -160,9 +155,6 @@ https://modelviewer.dev/editor/ helps with 3d model orientation
             </div>
 
 
-
-
-
             <!-- Renderings  -->
             <div class="row top5em">
                 <h5><span class="highlight-text-invert">Diagram</span></h5>
@@ -172,7 +164,7 @@ https://modelviewer.dev/editor/ helps with 3d model orientation
 
             <div class="row  white-background">
 
-                <div class="row col-md-6">
+                <div class="col-md-6">
                     <img src="images/sat-testbed-project/testbed-diagram-labeled.png" width="100%" class="img-responsive" />
                     <div class="hotspot" id="hs1"></div>
                     <div class="hotspot" id="hs2"></div>
@@ -194,7 +186,7 @@ https://modelviewer.dev/editor/ helps with 3d model orientation
                 </div>
 
 
-                <div class="row col-md-6">
+                <div class="col-md-6">
                     <table class="table table-bordered table-hover" id="table_1">
                         <tbody>
                             <tr>
